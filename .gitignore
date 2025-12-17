@@ -1,0 +1,12 @@
+# Environment / local
+ENV/
+.env
+
+# Spark runtime
+spark/
+spark-warehouse/
+tmp/
+.ivy2/
+
+# OS
+.DS_Store
