@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
 
   ############################
@@ -64,10 +66,10 @@ services:
       - smart_city_network
 
   ############################
-  # Spark Master (WITH KAFKA)
+  # Spark Master
   ############################
   spark-master:
-    build: ./spark
+    image: apache/spark:3.5.1
     container_name: spark-master
     command: >
       /opt/spark/bin/spark-class
@@ -84,7 +86,7 @@ services:
   # Spark Worker 1
   ############################
   spark-worker-1:
-    build: ./spark
+    image: apache/spark:3.5.1
     container_name: spark-worker-1
     depends_on:
       - spark-master
@@ -101,7 +103,7 @@ services:
   # Spark Worker 2
   ############################
   spark-worker-2:
-    build: ./spark
+    image: apache/spark:3.5.1
     container_name: spark-worker-2
     depends_on:
       - spark-master
