@@ -66,20 +66,16 @@ docker compose version
 git clone https://github.com/SaqerAlshehry/Real-Time-City-Pipeline.git
 cd Real-Time-Smart-City-Pipeline
 ```
-### 2️⃣ Stop Containers & remove old data
-```bash
-docker compose down
-docker volume rm real-time-smart-city-data-pipeline-with-kafka-spark-streaming-and-aws_postgres-data
-```
-### 3️⃣ Start all services
+
+### 2️⃣ Start all services
 ```bash
 docker compose up -d
 ```
-### 4️⃣ Wait for services to initialize
+### 3️⃣ Wait for services to initialize
 ```bash
 sleep 20
 ```
-### 5️⃣ Start the Spark streaming job
+### 4️⃣ Start the Spark streaming job
 ```bash
 docker exec -it spark-master \
 /opt/spark/bin/spark-submit \
@@ -96,7 +92,7 @@ http://localhost:8501
 ```
 You should see live data updating in real time!
 
-#### ☑️ To stop the Application
+#### ☑️ Stop Containers & remove old data
 ```bash
-docker compose down
+docker compose down -v
 ```
