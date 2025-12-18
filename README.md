@@ -63,7 +63,7 @@ docker compose version
 ## ▶️ How to Run the Application
 ### 1️⃣ Clone the Repo
 ```bash
-git clone https://github.com/SaqerAlshehry/Real-Time-Smart-City-Pipeline.git
+git clone https://github.com/SaqerAlshehry/Real-Time-City-Pipeline.git
 cd Real-Time-Smart-City-Pipeline
 ```
 ### 2️⃣ Stop Containers & remove old data
